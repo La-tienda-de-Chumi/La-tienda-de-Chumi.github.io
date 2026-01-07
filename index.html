@@ -8,22 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-  header {
-  position: relative;
-  z-index: 10;
-
-  background: linear-gradient(
-    135deg,
-    rgba(255, 0, 200, 0.55),
-    rgba(120, 0, 255, 0.55)
-  );
-
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  padding: 60px 20px;
-  text-align: center;
-}
+    /* ===== RESET BÁSICO ===== */
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -31,39 +19,54 @@
       background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
       color: #fff;
     }
+
+    /* ===== FONDO MANGA ===== */
     body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
+      content: "";
+      position: fixed;
+      inset: 0;
 
-  background-image: url("manga2-bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+      background-image: url("manga2-bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
-  opacity: 0.35;
-  z-index: -2;
-}
+      opacity: 0.35;
+      z-index: -2;
+    }
 
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.6)
-  );
-  z-index: 1;
-  pointer-events: none;
-}
+    /* ===== OSCURECIDO SUAVE (DEBAJO DEL HEADER) ===== */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
 
+      background: radial-gradient(
+        circle at center,
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.6)
+      );
 
+      z-index: -1;
+      pointer-events: none;
+    }
 
+    /* ===== HEADER TRANSLÚCIDO REAL ===== */
     header {
+      position: relative;
+      z-index: 10;
+
+      background: linear-gradient(
+        135deg,
+        rgba(255, 0, 200, 0.55),
+        rgba(120, 0, 255, 0.55)
+      );
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+
+      padding: 70px 20px;
       text-align: center;
-      padding: 60px 20px;
-      background: radial-gradient(circle, #ff4ecd, #7b2ff7);
     }
 
     header h1 {
@@ -73,64 +76,75 @@ body::after {
 
     header p {
       font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.9;
     }
 
+    /* ===== SECCIONES ===== */
     section {
-      padding: 50px 10%;
+      padding: 60px 10%;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
     h2 {
       color: #ffb6ff;
+      margin-bottom: 10px;
     }
 
+    /* ===== BOTÓN ===== */
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
+      margin-top: 25px;
+      padding: 12px 28px;
       background: linear-gradient(90deg, #ff4ecd, #7b2ff7);
       color: white;
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
+    /* ===== FOOTER ===== */
     footer {
-      background: #000;
+      background: rgba(0,0,0,0.6);
       text-align: center;
       padding: 15px;
       font-size: 0.85rem;
-      opacity: 0.7;
+      z-index: 2;
+      position: relative;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>La tienda de Chumi</h1>
-  <p>Textil friki y crochet artesanal ✨ Bajo demanda</p>
-</header>
+  <header>
+    <h1>La tienda de Chumi</h1>
+    <p>Textil friki y crochet artesanal ✨ Bajo demanda</p>
+  </header>
 
-<section>
-  <h2>👕 Textil Friki</h2>
-  <p>Camisetas, sudaderas y accesorios inspirados en anime, manga, cine y videojuegos.</p>
-</section>
+  <section>
+    <h2>👕 Textil Friki</h2>
+    <p>Camisetas, sudaderas y accesorios inspirados en anime, manga, cine y videojuegos.</p>
+  </section>
 
-<section>
-  <h2>🧶 Crochet Artesanal</h2>
-  <p>Amigurumis y accesorios hechos a mano y personalizados.</p>
-</section>
+  <section>
+    <h2>🧶 Crochet Artesanal</h2>
+    <p>Amigurumis y accesorios hechos a mano y personalizados.</p>
+  </section>
 
-<section>
-  <h2>📩 Encargos</h2>
-  <p>Todos los productos se realizan bajo demanda.</p>
-  <a class="btn" href="#">Próximamente WhatsApp</a>
-</section>
+  <section>
+    <h2>📩 Encargos</h2>
+    <p>Todos los productos se realizan bajo demanda.</p>
+    <a class="btn" href="#">Próximamente WhatsApp</a>
+  </section>
 
-<footer>
-  © 2026 · La tienda de Chumi · Hecho con amor friki 💜
-</footer>
+  <footer>
+    © 2026 · La tienda de Chumi · Hecho con amor friki 💜
+  </footer>
 
 </body>
 </html>
+
