@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== RESET BÁSICO ===== */
+    /* ===== RESET ===== */
     * {
       box-sizing: border-box;
     }
@@ -16,8 +16,13 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
+      background: linear-gradient(
+        180deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+      );
+      color: #ffffff;
     }
 
     /* ===== FONDO MANGA ===== */
@@ -35,7 +40,7 @@
       z-index: -2;
     }
 
-    /* ===== OSCURECIDO SUAVE (DEBAJO DEL HEADER) ===== */
+    /* ===== OSCURECIDO SUAVE ===== */
     body::after {
       content: "";
       position: fixed;
@@ -43,23 +48,23 @@
 
       background: radial-gradient(
         circle at center,
-        rgba(0,0,0,0.15),
-        rgba(0,0,0,0.6)
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.65)
       );
 
       z-index: -1;
       pointer-events: none;
     }
 
-    /* ===== HEADER TRANSLÚCIDO REAL ===== */
+    /* ===== HEADER TRANSLÚCIDO AZUL ===== */
     header {
       position: relative;
       z-index: 10;
 
       background: linear-gradient(
         135deg,
-        rgba(255, 0, 200, 0.55),
-        rgba(120, 0, 255, 0.55)
+        rgba(0, 229, 255, 0.45),
+        rgba(0, 188, 212, 0.45)
       );
 
       backdrop-filter: blur(14px);
@@ -72,12 +77,13 @@
     header h1 {
       font-size: 3rem;
       margin: 0;
+      color: #ffffff;
     }
 
     header p {
       font-size: 1.2rem;
       margin-top: 10px;
-      opacity: 0.9;
+      color: #e0f7fa;
     }
 
     /* ===== SECCIONES ===== */
@@ -89,31 +95,51 @@
     }
 
     h2 {
-      color: #ffb6ff;
-      margin-bottom: 10px;
+      color: #00e5ff;
+      margin-bottom: 12px;
+    }
+
+    section p {
+      color: #e0f7fa;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     /* ===== BOTÓN ===== */
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 28px;
-      background: linear-gradient(90deg, #ff4ecd, #7b2ff7);
-      color: white;
+      margin-top: 30px;
+      padding: 14px 30px;
+
+      background: linear-gradient(
+        90deg,
+        #00e5ff,
+        #00bcd4
+      );
+
+      color: #00363a;
       text-decoration: none;
       border-radius: 30px;
       font-weight: bold;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
     }
 
     /* ===== FOOTER ===== */
     footer {
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.6);
       text-align: center;
       padding: 15px;
       font-size: 0.85rem;
-      z-index: 2;
       position: relative;
+      z-index: 2;
+      color: #b2ebf2;
     }
   </style>
 </head>
@@ -127,24 +153,29 @@
 
   <section>
     <h2>👕 Textil Friki</h2>
-    <p>Camisetas, sudaderas y accesorios inspirados en anime, manga, cine y videojuegos.</p>
+    <p>
+      Camisetas, sudaderas y accesorios inspirados en anime, manga, cine y videojuegos.
+    </p>
   </section>
 
   <section>
     <h2>🧶 Crochet Artesanal</h2>
-    <p>Amigurumis y accesorios hechos a mano y personalizados.</p>
+    <p>
+      Amigurumis y accesorios hechos a mano y personalizados.
+    </p>
   </section>
 
   <section>
     <h2>📩 Encargos</h2>
-    <p>Todos los productos se realizan bajo demanda.</p>
+    <p>
+      Todos los productos se realizan bajo demanda.
+    </p>
     <a class="btn" href="#">Próximamente WhatsApp</a>
   </section>
 
   <footer>
-    © 2026 · La tienda de Chumi · Hecho con amor friki 💜
+    © 2026 · La tienda de Chumi · Hecho con amor friki 💙
   </footer>
 
 </body>
 </html>
-
