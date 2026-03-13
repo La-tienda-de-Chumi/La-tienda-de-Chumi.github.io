@@ -64,17 +64,14 @@ opacity:0.9;
 /* ===== MENÚ VISUAL ===== */
 
 .menu-visual{
-
 display:flex;
-flex-direction:column;   /* vertical */
+flex-direction:column;
 align-items:center;
-gap:35px;
-
+gap:40px;
 padding:60px 8%;
-
 }
 
-/* ===== TARJETA / BOTÓN ===== */
+/* ===== TARJETAS ===== */
 
 .menu-item{
 
@@ -83,12 +80,9 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 
-width:220px;
-
-text-align:center;
+width:260px;
 
 padding:25px;
-
 border-radius:20px;
 
 cursor:pointer;
@@ -111,14 +105,14 @@ box-shadow:0 15px 40px rgba(0,255,255,0.35);
 
 .image-container{
 
-position:relative;
-
-width:150px;
-height:150px;
-
 display:flex;
 align-items:center;
 justify-content:center;
+
+position:relative;
+
+width:170px;
+height:170px;
 
 }
 
@@ -128,8 +122,8 @@ justify-content:center;
 
 position:absolute;
 
-max-width:100%;
-max-height:100%;
+max-width:150px;
+max-height:150px;
 
 object-fit:contain;
 
@@ -149,25 +143,31 @@ opacity:1;
 opacity:0;
 }
 
-/* ===== TEXTO BOTÓN ===== */
+/* ===== TEXTO BOTONES ===== */
 
 .menu-item span{
 
 margin-top:15px;
 
-color:white;
+background:rgba(0,0,0,0.55);
 
-font-family:"Comic Sans MS", cursive;
-
-font-weight:bold;
-
-background:rgba(0,0,0,0.6);
-
-padding:8px 18px;
+padding:8px 16px;
 
 border-radius:20px;
 
+font-weight:bold;
+
 font-size:1rem;
+
+color:white;
+
+font-family:
+"Comic Sans MS",
+"Comic Sans",
+cursive;
+
+/* MAYÚSCULAS */
+text-transform:uppercase;
 
 }
 
