@@ -64,14 +64,17 @@ opacity:0.9;
 /* ===== MENÚ VISUAL ===== */
 
 .menu-visual{
+
 display:flex;
-flex-direction:column; /* vertical */
-align-items:center; /* centrar tarjetas */
-gap:40px;
+flex-direction:column;   /* vertical */
+align-items:center;
+gap:35px;
+
 padding:60px 8%;
+
 }
 
-/* ===== TARJETA BOTÓN ===== */
+/* ===== TARJETA / BOTÓN ===== */
 
 .menu-item{
 
@@ -80,9 +83,12 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 
-width:260px;
+width:220px;
+
+text-align:center;
 
 padding:25px;
+
 border-radius:20px;
 
 cursor:pointer;
@@ -91,6 +97,7 @@ background:rgba(255,255,255,0.05);
 backdrop-filter:blur(8px);
 
 transition:transform .3s, box-shadow .3s;
+
 text-decoration:none;
 
 }
@@ -104,14 +111,14 @@ box-shadow:0 15px 40px rgba(0,255,255,0.35);
 
 .image-container{
 
+position:relative;
+
+width:150px;
+height:150px;
+
 display:flex;
 align-items:center;
 justify-content:center;
-
-position:relative;
-
-width:170px;
-height:170px;
 
 }
 
@@ -121,8 +128,8 @@ height:170px;
 
 position:absolute;
 
-max-width:150px;
-max-height:150px;
+max-width:100%;
+max-height:100%;
 
 object-fit:contain;
 
@@ -142,30 +149,25 @@ opacity:1;
 opacity:0;
 }
 
-/* ===== TEXTO BOTONES ===== */
+/* ===== TEXTO BOTÓN ===== */
 
 .menu-item span{
 
 margin-top:15px;
 
-background:rgba(0,0,0,0.55);
+color:white;
 
-padding:8px 16px;
-
-border-radius:20px;
+font-family:"Comic Sans MS", cursive;
 
 font-weight:bold;
 
+background:rgba(0,0,0,0.6);
+
+padding:8px 18px;
+
+border-radius:20px;
+
 font-size:1rem;
-
-color:white;
-
-/* estilo comic */
-
-font-family:
-"Comic Sans MS",
-"Comic Sans",
-cursive;
 
 }
 
