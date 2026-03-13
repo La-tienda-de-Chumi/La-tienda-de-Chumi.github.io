@@ -10,133 +10,126 @@
 <style>
 
 /* ===== RESET Y FONDO ===== */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-  background: linear-gradient(180deg, #020c1b, #03162f, #052042);
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+color:#fff;
+background:linear-gradient(180deg,#020c1b,#03162f,#052042);
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("manga2-bg.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.35;
-  z-index: -2;
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background-image:url("manga2-bg.png");
+background-size:cover;
+background-position:center;
+opacity:0.35;
+z-index:-2;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
-  z-index: -1;
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:radial-gradient(circle,rgba(0,0,0,0.2),rgba(0,0,0,0.7));
+z-index:-1;
 }
 
-/* ===== HEADER TRANSLÚCIDO ===== */
-header {
-  padding: 70px 20px 50px;
-  text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 255, 255, 0.35),
-    rgba(0, 140, 255, 0.35)
-  );
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+/* ===== HEADER ===== */
+header{
+padding:70px 20px 50px;
+text-align:center;
+background:linear-gradient(
+135deg,
+rgba(0,255,255,0.35),
+rgba(0,140,255,0.35)
+);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.15);
 }
 
-header h1 {
-  font-size: 3rem;
-  margin: 0;
+header h1{
+font-size:3rem;
+margin:0;
 }
 
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+header p{
+font-size:1.2rem;
+opacity:0.9;
 }
 
 /* ===== MENÚ VISUAL ===== */
-.menu-visual {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  padding: 60px 8%;
+
+.menu-visual{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+padding:60px 8%;
 }
 
-.menu-item {
-  position: relative;
-  height: 260px;
-  border-radius: 20px;
-  overflow: hidden;
-  cursor: pointer;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.menu-item{
+position:relative;
+height:260px;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(8px);
+transition:transform .3s,box-shadow .3s;
 }
 
-.menu-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,255,255,0.35);
+.menu-item:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,255,255,0.35);
 }
 
 /* IMÁGENES */
-.menu-item img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.4s ease;
+
+.menu-item img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:opacity .4s;
 }
 
-.menu-item img.hover {
-  opacity: 0;
+.menu-item img.hover{
+opacity:0;
 }
 
-.menu-item:hover img.hover {
-  opacity: 1;
+.menu-item:hover img.hover{
+opacity:1;
 }
 
-.menu-item:hover img.base {
-  opacity: 0;
+.menu-item:hover img.base{
+opacity:0;
 }
 
-/* TEXTO */
-.menu-item span {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.55);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  white-space: nowrap;
+/* TEXTO BOTÓN */
+
+.menu-item span{
+position:absolute;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(0,0,0,0.55);
+padding:8px 16px;
+border-radius:20px;
+font-weight:500;
+font-size:0.95rem;
+white-space:nowrap;
 }
 
-/* ===== SECCIONES ===== */
-section {
-  padding: 70px 10%;
-  text-align: center;
-}
+/* FOOTER */
 
-h2 {
-  color: #7df9ff;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: #000;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.85rem;
-  opacity: 0.7;
+footer{
+background:#000;
+text-align:center;
+padding:15px;
+font-size:.85rem;
+opacity:.7;
 }
 
 </style>
@@ -145,62 +138,44 @@ footer {
 <body>
 
 <header>
-  <h1>La tienda de Chumi</h1>
-  <p>Textil friki y crochet artesanal ✨ Bajo demanda</p>
+<h1>La tienda de Chumi</h1>
+<p>Textil friki y crochet artesanal ✨ Bajo demanda</p>
 </header>
 
-<!-- ===== MENÚ VISUAL ===== -->
 <div class="menu-visual">
 
-  <a class="menu-item" href="#textil">
-    <img src="camiseta lisa.png" class="base" alt="">
-    <img src="camiseta friki.png" class="hover" alt="">
-    <span>Textil Friki</span>
-  </a>
-
-<a class="menu-item" href="#crochet">
-  <img src="OVILLO.png" class="base" alt="Ovillo de lana">
-  <img src="AMIGURUMI.png" class="hover" alt="Amigurumi artesanal">
-  <span>Crochet Artesanal</span>
+<a class="menu-item" href="textil.html">
+<img src="camiseta lisa.png" class="base">
+<img src="camiseta friki.png" class="hover">
+<span>Textil Friki</span>
 </a>
 
-  <a class="menu-item" href="#medida">
-    <img src="bocadillo.png" class="base" alt="">
-    <img src="camiseta idea.png" class="hover" alt="">
-    <span>Textil a tu medida</span>
-  </a>
+<a class="menu-item" href="crochet.html">
+<img src="OVILLO.png" class="base">
+<img src="AMIGURUMI.png" class="hover">
+<span>Crochet Artesanal</span>
+</a>
 
-  <a class="menu-item" href="#diseno">
-    <img src="lienzo.png" class="base" alt="">
-    <img src="camiseta lienzo.png" class="hover" alt="">
-    <span>Tú diseñas, nosotros lo hacemos</span>
-  </a>
+<a class="menu-item" href="medida.html">
+<img src="bocadillo.png" class="base">
+<img src="camiseta idea.png" class="hover">
+<span>Textil a tu medida</span>
+</a>
+
+<a class="menu-item" href="diseno.html">
+<img src="lienzo.png" class="base">
+<img src="camiseta lienzo.png" class="hover">
+<span>Tú diseñas, nosotros lo hacemos</span>
+</a>
 
 </div>
 
-<section id="textil">
-  <h2>👕 Textil Friki</h2>
-  <p>Camisetas, sudaderas y accesorios inspirados en anime, manga, cine y videojuegos.</p>
-</section>
-
-<section id="crochet">
-  <h2>🧶 Crochet Artesanal</h2>
-  <p>Amigurumis y accesorios hechos a mano y personalizados.</p>
-</section>
-
-<section id="medida">
-  <h2>✨ Textil a tu medida</h2>
-  <p>Cuéntanos tu idea y la convertimos en prenda.</p>
-</section>
-
-<section id="diseno">
-  <h2>🎨 Tú diseñas, nosotros lo hacemos</h2>
-  <p>Del diseño al producto final.</p>
-</section>
-
 <footer>
-  © 2026 · La tienda de Chumi · Hecho con amor friki 💙
+© 2026 · La tienda de Chumi · Hecho con amor friki 💙
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
