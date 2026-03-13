@@ -10,6 +10,7 @@
 <style>
 
 /* ===== RESET Y FONDO ===== */
+
 body{
 margin:0;
 font-family:'Poppins',sans-serif;
@@ -37,6 +38,7 @@ z-index:-1;
 }
 
 /* ===== HEADER ===== */
+
 header{
 padding:70px 20px 50px;
 text-align:center;
@@ -63,21 +65,24 @@ opacity:0.9;
 
 .menu-visual{
 display:flex;
-justify-content:center;
+flex-direction:column; /* vertical */
+align-items:center; /* centrar tarjetas */
 gap:40px;
-flex-wrap:wrap;
 padding:60px 8%;
 }
 
-/* BOTÓN */
+/* ===== TARJETA BOTÓN ===== */
 
 .menu-item{
+
 display:flex;
 flex-direction:column;
 align-items:center;
-text-align:center;
+justify-content:center;
 
-padding:20px;
+width:260px;
+
+padding:25px;
 border-radius:20px;
 
 cursor:pointer;
@@ -86,6 +91,8 @@ background:rgba(255,255,255,0.05);
 backdrop-filter:blur(8px);
 
 transition:transform .3s, box-shadow .3s;
+text-decoration:none;
+
 }
 
 .menu-item:hover{
@@ -93,22 +100,34 @@ transform:translateY(-8px);
 box-shadow:0 15px 40px rgba(0,255,255,0.35);
 }
 
-/* CONTENEDOR IMAGEN */
+/* ===== CONTENEDOR IMAGEN ===== */
 
 .image-container{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
 position:relative;
+
 width:170px;
 height:170px;
+
 }
 
-/* IMÁGENES */
+/* ===== IMÁGENES ===== */
 
 .image-container img{
+
 position:absolute;
-width:100%;
-height:100%;
+
+max-width:150px;
+max-height:150px;
+
 object-fit:contain;
+
 transition:opacity .4s;
+
 }
 
 .image-container img.hover{
@@ -123,18 +142,34 @@ opacity:1;
 opacity:0;
 }
 
-/* TEXTO */
+/* ===== TEXTO BOTONES ===== */
 
 .menu-item span{
+
 margin-top:15px;
+
 background:rgba(0,0,0,0.55);
+
 padding:8px 16px;
+
 border-radius:20px;
-font-weight:500;
-font-size:0.95rem;
+
+font-weight:bold;
+
+font-size:1rem;
+
+color:white;
+
+/* estilo comic */
+
+font-family:
+"Comic Sans MS",
+"Comic Sans",
+cursive;
+
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 footer{
 background:#000;
@@ -208,9 +243,6 @@ opacity:.7;
 <footer>
 © 2026 · La tienda de Chumi · Hecho con amor friki 💙
 </footer>
-
-</body>
-</html>
 
 </body>
 </html>
