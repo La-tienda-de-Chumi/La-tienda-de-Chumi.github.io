@@ -8,7 +8,7 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  background: url('crochet.png') no-repeat center center fixed;
+  background: url('b822fd8e-2c7a-474d-9dca-ad690d22fa4e.png') no-repeat center center fixed;
   background-size: cover;
   color: white;
   text-align: center;
@@ -32,19 +32,24 @@ nav button {
   background: rgba(0,0,0,0.5);
   border: 2px solid #7df9ff;
   border-radius: 15px;
-  padding: 20px 30px;  /* un poco más de espacio para las imágenes grandes */
+  padding: 15px 15px;
+  width: 120px; /* Mantener tamaño fijo del botón */
+  height: 140px; 
   font-size: 16px;
   color: #7df9ff;
   cursor: pointer;
   display: flex;
+  flex-direction: column; /* Texto debajo de la imagen */
   align-items: center;
-  gap: 15px;  /* más separación entre imagen y texto */
+  justify-content: center;
+  gap: 10px;
   transition: all 0.3s ease;
 }
 
 nav button img {
-  width: 60px;  /* tamaño más grande */
-  height: 60px;
+  width: 80px;  /* Imagen más grande */
+  height: 80px;
+  object-fit: contain;
 }
 
 nav button:hover {
@@ -93,16 +98,20 @@ function mostrarSeccion(id) {
 <!-- Botones de navegación -->
 <nav>
   <button onclick="mostrarSeccion('mantas')">
-    <img src="manta.png" alt="Mantas"> Mantas
+    <img src="1-manta.png" alt="Mantas"> 
+    Mantas
   </button>
   <button onclick="mostrarSeccion('amigurumis')">
-    <img src="setas.png" alt="Amigurumis"> Amigurumis
+    <img src="2-setas.png" alt="Amigurumis"> 
+    Amigurumis
   </button>
   <button onclick="mostrarSeccion('ropa')">
-    <img src="ropa.png" alt="Ropa"> Ropa
+    <img src="3-ropa.png" alt="Ropa"> 
+    Ropa
   </button>
   <button onclick="mostrarSeccion('complementos')">
-    <img src="bolso.png" alt="Complementos"> Complementos
+    <img src="4-bolso.png" alt="Complementos"> 
+    Complementos
   </button>
 </nav>
 
