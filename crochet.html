@@ -8,7 +8,7 @@
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  background: url('crochet.png') no-repeat center center fixed;
+  background: url('b822fd8e-2c7a-474d-9dca-ad690d22fa4e.png') no-repeat center center fixed;
   background-size: cover;
   color: white;
   text-align: center;
@@ -33,13 +33,13 @@ nav button {
   border: 2px solid #7df9ff;
   border-radius: 15px;
   padding: 15px 15px;
-  width: 120px; /* Mantener tamaño fijo del botón */
-  height: 140px; 
+  width: 120px;
+  height: 140px;
   font-size: 16px;
   color: #7df9ff;
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* Texto debajo de la imagen */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -47,7 +47,7 @@ nav button {
 }
 
 nav button img {
-  width: 80px;  /* Imagen más grande */
+  width: 80px;
   height: 80px;
   object-fit: contain;
 }
@@ -59,15 +59,52 @@ nav button:hover {
 }
 
 section {
-  padding: 80px 10%;
+  padding: 50px 10%;
   background: rgba(0,0,0,0.4);
   border-radius: 15px;
   margin: 20px auto;
   max-width: 1000px;
+  text-align: center;
 }
 
-section h2 {
-  margin-top: 0;
+/* Contenedor de productos */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Tarjeta de producto */
+.producto {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 15px;
+  width: 200px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.producto h3 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+}
+
+.producto p {
+  margin: 0;
+  font-size: 16px;
+  color: #7df9ff;
+}
+
+.producto:hover {
+  transform: scale(1.05);
 }
 
 /* Secciones individuales para navegación */
@@ -95,45 +132,96 @@ function mostrarSeccion(id) {
   <a href="index.html">⬅ Volver a la tienda</a>
 </header>
 
-<!-- Botones de navegación -->
 <nav>
   <button onclick="mostrarSeccion('mantas')">
-    <img src="manta.png" alt="Mantas"> 
+    <img src="1-manta.png" alt="Mantas"> 
     Mantas
   </button>
   <button onclick="mostrarSeccion('amigurumis')">
-    <img src="setas.png" alt="Amigurumis"> 
+    <img src="2-setas.png" alt="Amigurumis"> 
     Amigurumis
   </button>
   <button onclick="mostrarSeccion('ropa')">
-    <img src="ropa.png" alt="Ropa"> 
+    <img src="3-ropa.png" alt="Ropa"> 
     Ropa
   </button>
   <button onclick="mostrarSeccion('complementos')">
-    <img src="bolso.png" alt="Complementos"> 
+    <img src="4-bolso.png" alt="Complementos"> 
     Complementos
   </button>
 </nav>
 
-<!-- Secciones -->
+<!-- Sección Mantas -->
 <section id="mantas">
   <h2>Mantas</h2>
   <p>Aquí encontrarás mantas artesanales de crochet, hechas con mucho amor y colores únicos.</p>
+  <div class="productos">
+    <div class="producto">
+      <img src="manta1.png" alt="Manta 1">
+      <h3>Manta Azul</h3>
+      <p>$45</p>
+    </div>
+    <div class="producto">
+      <img src="manta2.png" alt="Manta 2">
+      <h3>Manta Rosa</h3>
+      <p>$50</p>
+    </div>
+    <!-- Puedes agregar más productos aquí -->
+  </div>
 </section>
 
+<!-- Sección Amigurumis -->
 <section id="amigurumis">
   <h2>Amigurumis</h2>
   <p>Amigurumis adorables y hechos a mano, perfectos como regalo o decoración.</p>
+  <div class="productos">
+    <div class="producto">
+      <img src="amigurumi1.png" alt="Seta 1">
+      <h3>Seta Roja</h3>
+      <p>$15</p>
+    </div>
+    <div class="producto">
+      <img src="amigurumi2.png" alt="Seta 2">
+      <h3>Seta Azul</h3>
+      <p>$18</p>
+    </div>
+  </div>
 </section>
 
+<!-- Sección Ropa -->
 <section id="ropa">
   <h2>Ropa</h2>
   <p>Ropa tejida a crochet con diseños exclusivos y materiales de calidad.</p>
+  <div class="productos">
+    <div class="producto">
+      <img src="ropa1.png" alt="Suéter">
+      <h3>Suéter Tejido</h3>
+      <p>$35</p>
+    </div>
+    <div class="producto">
+      <img src="ropa2.png" alt="Bufanda">
+      <h3>Bufanda</h3>
+      <p>$20</p>
+    </div>
+  </div>
 </section>
 
+<!-- Sección Complementos -->
 <section id="complementos">
   <h2>Complementos</h2>
   <p>Bolso, accesorios y otros complementos tejidos a mano para un estilo único.</p>
+  <div class="productos">
+    <div class="producto">
+      <img src="bolso1.png" alt="Bolso">
+      <h3>Bolso Azul</h3>
+      <p>$40</p>
+    </div>
+    <div class="producto">
+      <img src="bolso2.png" alt="Bolso">
+      <h3>Bolso Rosa</h3>
+      <p>$42</p>
+    </div>
+  </div>
 </section>
 
 </body>
