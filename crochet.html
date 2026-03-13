@@ -5,27 +5,35 @@
 <title>Crochet Artesanal</title>
 
 <style>
-body{
-margin:0;
-font-family:Poppins,sans-serif;
-background:#03162f;
-color:white;
-text-align:center;
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background: url('crochet.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
 }
 
-header{
-padding:60px;
-background:linear-gradient(135deg,#00ffff55,#008cff55);
+header {
+  padding: 60px;
+  /* Fondo semi-transparente dejando ver la imagen */
+  background: rgba(0, 140, 255, 0.5);
+  /* Efecto de degradado sutil sobre el fondo */
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.4), rgba(0, 140, 255, 0.5));
+  backdrop-filter: blur(5px); /* suaviza un poco la imagen de fondo detrás del header */
 }
 
-section{
-padding:80px 10%;
+section {
+  padding: 80px 10%;
+  background: rgba(0,0,0,0.4); /* opcional: sección con fondo semi-transparente para mejor lectura */
+  border-radius: 15px;
+  margin: 20px auto;
 }
 
-a{
-color:#7df9ff;
-text-decoration:none;
-font-size:18px;
+a {
+  color: #7df9ff;
+  text-decoration: none;
+  font-size: 18px;
 }
 </style>
 
@@ -34,16 +42,14 @@ font-size:18px;
 <body>
 
 <header>
-<h1>🧶 Crochet Artesanal</h1>
-<p>Amigurumis y accesorios hechos a mano</p>
-<a href="index.html">⬅ Volver a la tienda</a>
+  <h1>🧶 Crochet Artesanal</h1>
+  <p>Amigurumis y accesorios hechos a mano</p>
+  <a href="index.html">⬅ Volver a la tienda</a>
 </header>
 
 <section>
-
-<h2>Productos</h2>
-<p>Aquí aparecerán los amigurumis y artículos de crochet.</p>
-
+  <h2>Productos</h2>
+  <p>Aquí aparecerán los amigurumis y artículos de crochet.</p>
 </section>
 
 </body>
