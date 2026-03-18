@@ -15,7 +15,7 @@ color:white;
 text-align:center;
 }
 
-/* capa oscura */
+/* capa oscura para que el texto se vea */
 body::before{
 content:"";
 position:fixed;
@@ -51,7 +51,8 @@ a:hover{
 text-decoration:underline;
 }
 
-/* formulario Google */
+/* Contenedor del formulario */
+
 .formulario{
 margin-top:40px;
 background:white;
@@ -69,119 +70,7 @@ border:none;
 border-radius:10px;
 }
 
-/* NUEVO FORMULARIO PEDIDO */
-.pedido{
-margin-top:60px;
-background:white;
-border-radius:15px;
-padding:30px;
-max-width:500px;
-margin-left:auto;
-margin-right:auto;
-color:black;
-text-align:left;
-}
-
-.pedido label{
-font-weight:bold;
-}
-
-.pedido select,
-.pedido input{
-width:100%;
-padding:8px;
-margin-top:5px;
-margin-bottom:15px;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-.pedido button{
-width:100%;
-padding:10px;
-background:#008cff;
-color:white;
-border:none;
-border-radius:10px;
-cursor:pointer;
-}
-
-.pedido button:hover{
-background:#006fd1;
-}
-
 </style>
-
-<script>
-const data = {
-  "bebe": {
-    nombre: "Stanley/Stella Baby",
-    colores: {
-      "Blanco": ["0-6m", "6-12m"],
-      "Rosa": ["6-12m", "12-18m"],
-      "Azul": ["0-6m", "12-18m"]
-    }
-  },
-  "nino": {
-    nombre: "Dogo Premium Niño",
-    colores: {
-      "Negro": ["3-4", "5-6", "7-8"],
-      "Rojo": ["5-6", "7-8", "9-11"],
-      "Azul": ["3-4", "9-11"]
-    }
-  },
-  "adulto": {
-    nombre: "Dogo Premium",
-    colores: {
-      "Blanco": ["S", "M", "L"],
-      "Negro": ["M", "L", "XL"],
-      "Gris": ["S", "M"],
-      "Verde": ["L", "XL"]
-    }
-  }
-};
-
-function updateColors() {
-  const tipo = document.getElementById("tipo").value;
-  const colorSelect = document.getElementById("color");
-  colorSelect.innerHTML = "";
-
-  Object.keys(data[tipo].colores).forEach(color => {
-    let opt = document.createElement("option");
-    opt.value = color;
-    opt.textContent = color;
-    colorSelect.appendChild(opt);
-  });
-
-  updateSizes();
-}
-
-function updateSizes() {
-  const tipo = document.getElementById("tipo").value;
-  const color = document.getElementById("color").value;
-  const tallaSelect = document.getElementById("talla");
-  tallaSelect.innerHTML = "";
-
-  data[tipo].colores[color].forEach(talla => {
-    let opt = document.createElement("option");
-    opt.value = talla;
-    opt.textContent = talla;
-    tallaSelect.appendChild(opt);
-  });
-}
-
-function submitForm() {
-  const tipo = document.getElementById("tipo").value;
-  const color = document.getElementById("color").value;
-  const talla = document.getElementById("talla").value;
-  const cantidad = document.getElementById("cantidad").value;
-
-  const resumen = `Pedido:\nTipo: ${tipo}\nColor: ${color}\nTalla: ${talla}\nCantidad: ${cantidad}`;
-  alert(resumen);
-}
-
-window.onload = updateColors;
-</script>
 
 </head>
 
@@ -195,38 +84,19 @@ window.onload = updateColors;
 
 <section>
 
-<h2>Tu diseño en ropa</h2>
-<p>Adjunta tus bocetos, imágenes o fanarts.</p>
+<h2>Tú diseño en ropa</h2>
 
-<!-- FORMULARIO GOOGLE -->
+<p>
+Adjunta tus bocetos, imágenes o fanarts.
+</p>
+
 <div class="formulario">
+
 <iframe 
-src="https://docs.google.com/forms/d/e/TU_FORM_ID/viewform?embedded=true">
+src="https://forms.gle/X1488vAde8uEVX2v8">
 Cargando…
 </iframe>
-</div>
 
-<!-- NUEVO FORMULARIO DE PEDIDO -->
-<div class="pedido">
-<h2>🛒 Pedido de camisetas</h2>
-
-<label>Tipo:</label>
-<select id="tipo" onchange="updateColors()">
-  <option value="bebe">Bebé</option>
-  <option value="nino">Niño</option>
-  <option value="adulto">Adulto</option>
-</select>
-
-<label>Color:</label>
-<select id="color" onchange="updateSizes()"></select>
-
-<label>Talla:</label>
-<select id="talla"></select>
-
-<label>Cantidad:</label>
-<input type="number" id="cantidad" min="1" value="1">
-
-<button onclick="submitForm()">Enviar pedido</button>
 </div>
 
 </section>
